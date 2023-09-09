@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      /* Style the tab */
+      .onglet {
+        overflow: hidden;
+        border: 1px solid #070142;
+        background: #ffbc34;
+        padding: 10px;
+      }
+
+      /* Style the buttons inside the tab */
+      .onglet button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+
+      /* Change background color of buttons on hover */
+      .onglet button:hover {
+        background-color: #ddd;
+      }
+
+      /* Create an active/current tablink class */
+      .onglet button.active {
+        background-color: orange;
+      }
+
+      /* Style the tab content */
+      .onglet-contenu {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+
+      .paragraph1 {
+        color: blue;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .paragraph1:after {
+        content: " ▼";
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Onglets</h2>
+    <p class="paragraph1">Click et découvre les éléments</p>
+
+    <div class="onglet">
+      <button class="onglink" onclick="openTable(event, 'Or')">Or</button>
+      <button class="onglink" onclick="openTable(event, 'Plomb')">Plomb</button>
+      <button class="onglink" onclick="openTable(event, 'Nobélium')">
+        Nobélium
+      </button>
+    </div>
+
+    <div id="Or" class="onglet-contenu">
+      <h3>Or</h3>
+      <p>Or est le 79 ème élément du Tableau Périodique . Son nom est " Au".</p>
+    </div>
+
+    <div id="Plomb" class="onglet-contenu">
+      <h3>Plomb</h3>
+      <p>
+        Le Plomb est le 82 ème élément du Tableau Périodique . Son nom est " Pb"
+      </p>
+    </div>
+
+    <div id="Nobélium" class="onglet-contenu">
+      <h3>Nobélium</h3>
+      <p>
+        Le Nobélium est le 102 ème élément du Tableau Périodique : Son nom est "
+        No"
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
